@@ -1,0 +1,155 @@
+@media (max-width: 768px) {
+  .progress {
+    height: 25px;
+  }
+}
+@media (max-width: 420px) {
+  .progress {
+    height: 20px;
+  }
+}
+
+.namehero {
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  .namehero {
+    font-size: 25px;
+  }
+}
+@media (max-width: 420px) {
+  .namehero {
+    font-size: 28px;
+  }
+}
+
+.wrappercard {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  display: inline-block;
+}
+
+.appearance {
+  text-align: center;
+  margin-top: 7%;
+  margin-left: 15%;
+  width: 40%;
+  color: white;
+  float: left;
+}
+@media (max-width: 768px) {
+  .appearance {
+    margin-top: 19%;
+  }
+}
+@media (max-width: 420px) {
+  .appearance {
+    margin-top: 18%;
+  }
+}
+
+.appearance h1 {
+  font-size: 30px;
+}
+
+.appearance h2 {
+  font-size: 15px;
+}
+
+.progressbars {
+  align-items: center;
+  margin-top: 10%;
+  width: 40%;
+  color: white;
+  float: left;
+}
+@media (max-width: 768px) {
+  .progressbars {
+    margin-top: 25%;
+  }
+}
+@media (max-width: 420px) {
+  .progressbars {
+    margin-top: 25%;
+  }
+}
+
+.cardsone {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  border: red 1px solid;
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .cardsone {
+    width: 200px;
+    height: 300px;
+  }
+}
+@media (max-width: 420px) {
+  .cardsone {
+    width: 120px;
+    height: 200px;
+  }
+}
+
+.cardsone img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.cardsone:hover {
+  box-shadow: 0 8px 10px 10px rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+
+.button-3 {
+  appearance: none;
+  background-color: #410101;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 6px;
+  box-shadow: rgb(0, 0, 0) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+}
+
+.button-3:hover {
+  background-color: #580303;
+}
+
+.button-3:focus {
+  box-shadow: rgba(250, 0, 0, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: red;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(0, 0, 0, 0.8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #2b0000;
+  box-shadow: rgba(0, 0, 0, 0.493) 0 1px 0 inset;
+}
