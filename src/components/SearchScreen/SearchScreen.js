@@ -20,11 +20,11 @@ export const SearchScreen = () => {
   ];
   const appearance = [
     { id: 7, value: "gender", label: "gender" },
-    { id: 8, value: "Race", label: "Race" },
+    { id: 8, value: "race", label: "race" },
     { id: 9, value: "height", label: "height" },
     { id: 10, value: "weight", label: "weight" },
-    { id: 11, value: " eye-color", label: " eye-color" },
-    { id: 12, value: " hair-color", label: " hair-color" },
+    { id: 11, value: "eye-color", label: "eye-color" },
+    { id: 12, value: "hair-color", label: "hair-color" },
   ];
 
   const [data, setdata] = useState([]);
@@ -74,6 +74,35 @@ export const SearchScreen = () => {
     return <Loading />;
   }
 
+  const filterPowerstats = (value) => {
+    const key = value.label
+    data.sort((a, b) => {
+      return b.powerstats[key] - a.powerstats[key]
+    })
+    setdata([...data])
+  }
+
+  const filterAppearance = (value) => {
+    const key = value.label
+    data.sort((a, b) => {
+      let A = a.appearance[key]
+      let B = b.appearance[key]
+      if (key === "height" || key === "weight") {
+        A = a.appearance[key][1]
+        B = b.appearance[key][1]
+      }
+      if (A > B) {
+        return 1;
+      }
+      if (A < B) {
+        return -1;
+      }
+      return 0;
+    });
+    setdata([...data])
+  }
+
+
   return (
     <div className="container">
       <div className="search">
@@ -95,12 +124,14 @@ export const SearchScreen = () => {
           <div className="filter">Filtrar por</div>
           <div className="selectrs">
             <Select
+              onChange={filterPowerstats}
               className="Dropdown"
               options={powerstats}
               placeholder="Powerstats"
             />
             <Select
               className="Dropdown1"
+              onChange={filterAppearance}
               options={appearance}
               placeholder="Appearance"
             />
